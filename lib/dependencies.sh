@@ -9,7 +9,7 @@ install_node_modules() {
     else
       echo "Installing node modules (package.json)"
     fi
-    npm install -g yarn --unsafe-perm --userconfig $build_dir/.npmrc 2>&1
+    npm install -g yarn@0.17.10 --unsafe-perm --userconfig $build_dir/.npmrc 2>&1
     yarn install 2>&1
   else
     echo "Skipping (no package.json)"
@@ -28,7 +28,7 @@ rebuild_node_modules() {
     else
       echo "Installing any new modules (package.json)"
     fi
-    npm install -g yarn --unsafe-perm --userconfig $build_dir/.npmrc 2>&1
+    npm install -g yarn@0.17.10 --unsafe-perm --userconfig $build_dir/.npmrc 2>&1
     yarn install 2>&1
   else
     echo "Skipping (no package.json)"
